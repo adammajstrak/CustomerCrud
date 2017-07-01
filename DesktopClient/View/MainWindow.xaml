@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DesktopClient"
         xmlns:converters="clr-namespace:DesktopClient.View.Converters"
-        WindowStartupLocation="CenterScreen"
         mc:Ignorable="d"
+        WindowState="Maximized"
         Icon="Resources/1498873817_user-01.png"
         Title="{Binding Title}" Height="900" Width="1600"
         DataContext="{Binding Main, Source={StaticResource Locator}}" Background="#FF2D2D30">
