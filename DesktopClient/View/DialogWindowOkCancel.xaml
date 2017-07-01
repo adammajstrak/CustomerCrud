@@ -1,0 +1,29 @@
+﻿<Window x:Class="DesktopClient.View.DialogWindowOkCancel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DesktopClient.View"
+        mc:Ignorable="d"
+        Icon="Resources/1498873817_user-01.png"
+        Background="#252526" WindowStartupLocation="CenterScreen"
+        Title="Confirmation" Height="130" Width="300">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Style="{StaticResource WindowHeaderTextBlock}">Are you sure?</TextBlock>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button Style="{StaticResource DialogButtonCancel}" Grid.Column="0" Content="Cancel" Click="Close"/>
+            <Button Style="{StaticResource DialogButtonOk}" Grid.Column="1" Content="Ok" Command="{Binding ConfirmAction}"/>
+        </Grid>
+
+    </Grid>
+  
+</Window>

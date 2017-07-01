@@ -1,0 +1,64 @@
+﻿<Window x:Class="DesktopClient.View.EditCustomer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DesktopClient.View"
+        mc:Ignorable="d"
+        Icon="Resources/1498873817_user-01.png"
+        Title="Edit Customer" Height="350" Width="600"
+        Background="#252526" WindowStartupLocation="CenterScreen"
+        DataContext="{Binding EditCustomer, Source={StaticResource Locator}}" >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock Style="{StaticResource WindowHeaderTextBlock}" Grid.Row="0">Edit customer</TextBlock>
+        <Grid Grid.Row="1" Margin="0,10,0,10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150"></ColumnDefinition>
+                <ColumnDefinition Width="150"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Label Grid.Row="0" Grid.Column="0" Content="Name:" Style="{StaticResource FieldDescription}" />
+            <TextBox Grid.Row="0" Grid.Column="1"  Style="{StaticResource ValidatedTextBox}" Text="{Binding Name, ValidatesOnDataErrors=True}"/>
+
+            <Label Grid.Row="1" Grid.Column="0" Content="Surname:" Style="{StaticResource FieldDescription}"/>
+            <TextBox Grid.Row="1" Grid.Column="1"  Style="{StaticResource ValidatedTextBox}" Text="{Binding Surname, ValidatesOnDataErrors=True}"/>
+
+            <Label Grid.Row="2" Grid.Column="0" Content="Telephone number:" Style="{StaticResource FieldDescription}"/>
+            <TextBox Grid.Row="2" Grid.Column="1"  Style="{StaticResource ValidatedTextBox}" Text="{Binding TelephoneNumber, ValidatesOnDataErrors=True}"/>
+
+            <Label Grid.Row="3" Grid.Column="0" Content="Street:" Style="{StaticResource FieldDescription}"/>
+            <TextBox Grid.Row="3" Grid.Column="1"  Style="{StaticResource ValidatedTextBox}" Text="{Binding Street, ValidatesOnDataErrors=True}"/>
+
+            <Label Grid.Row="4" Grid.Column="0" Content="Building number:" Style="{StaticResource FieldDescription}"/>
+            <TextBox Grid.Row="4" Grid.Column="1"  Style="{StaticResource ValidatedTextBox}" Text="{Binding BuildingNumber, ValidatesOnDataErrors=True}"/>
+
+            <Label Grid.Row="5" Grid.Column="0" Content="Flat number:" Style="{StaticResource FieldDescription}"/>
+            <TextBox Grid.Row="5" Grid.Column="1"  Style="{StaticResource ValidatedTextBox}" Text="{Binding FlatNumber, ValidatesOnDataErrors=True}"/>
+
+            <Label Grid.Row="6" Grid.Column="0" Content="Postal code:" Style="{StaticResource FieldDescription}"/>
+            <TextBox Grid.Row="6" Grid.Column="1"  Style="{StaticResource ValidatedTextBox}" Text="{Binding PostalCode, ValidatesOnDataErrors=True}"/>
+
+            <Label Grid.Row="7" Grid.Column="0" Content="Town:" Style="{StaticResource FieldDescription}"/>
+            <TextBox Grid.Row="7" Grid.Column="1"  Style="{StaticResource ValidatedTextBox}" Text="{Binding Town, ValidatesOnDataErrors=True}"/>
+
+            <Button Grid.Row="8" Grid.Column="0" HorizontalAlignment="Right" Content="Cancel" Style="{StaticResource DialogButtonCancel}" Click="Close"/>
+            <Button Grid.Row="8" Grid.Column="1" HorizontalAlignment="Left"  Content="Ok" Style="{StaticResource DialogButtonOk}" Command="{Binding SaveCustomer, ValidatesOnDataErrors=True}" />
+
+        </Grid>
+    </Grid>
+</Window>
