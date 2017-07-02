@@ -26,12 +26,16 @@ namespace CustomerDatabase.Model
         /// Gets or sets the street
         /// </summary>
         [Required]
+        [Column(TypeName = "NVARCHAR")]
+        [StringLength(50)]
         public string Street { get; set; }
 
         /// <summary>
         /// Gets or sets the building number
         /// </summary>
         [Required]
+        [Column(TypeName = "NVARCHAR")]
+        [StringLength(10)]
         public string BuildingNumber { get; set; }
 
         /// <summary>
@@ -43,12 +47,16 @@ namespace CustomerDatabase.Model
         /// Gets or sets the postal code
         /// </summary>
         [Required]
+        [Column(TypeName = "NVARCHAR")]
+        [StringLength(10)]
         public string PostalCode { get; set; }
 
         /// <summary>
         /// Gets or sets the town
         /// </summary>
         [Required]
+        [Column(TypeName = "NVARCHAR")]
+        [StringLength(50)]
         public string Town { get; set; }
 
         /// <summary>

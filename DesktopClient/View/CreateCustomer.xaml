@@ -34,28 +34,28 @@
             </Grid.RowDefinitions>
 
             <Label Grid.Row="0" Grid.Column="0" Content="Name:" Style="{StaticResource FieldDescription}" />
-            <TextBox Grid.Row="0" Grid.Column="1"  Style="{StaticResource ValidatedTextBox}" Text="{Binding Name, ValidatesOnDataErrors=True}"/>
+            <TextBox MaxLength="25" Grid.Row="0" Grid.Column="1"  Style="{StaticResource ValidatedTextBox}" Text="{Binding Name, ValidatesOnDataErrors=True}"/>
 
             <Label Grid.Row="1" Grid.Column="0" Content="Surname:" Style="{StaticResource FieldDescription}"/>
-            <TextBox Grid.Row="1" Grid.Column="1"  Style="{StaticResource ValidatedTextBox}" Text="{Binding Surname, ValidatesOnDataErrors=True}"/>
+            <TextBox MaxLength="50" Grid.Row="1" Grid.Column="1"  Style="{StaticResource ValidatedTextBox}" Text="{Binding Surname, ValidatesOnDataErrors=True}"/>
 
             <Label Grid.Row="2" Grid.Column="0" Content="Telephone number:" Style="{StaticResource FieldDescription}"/>
             <TextBox Grid.Row="2" Grid.Column="1"  Style="{StaticResource ValidatedTextBox}" Text="{Binding TelephoneNumber, ValidatesOnDataErrors=True}"/>
 
             <Label Grid.Row="3" Grid.Column="0" Content="Street:" Style="{StaticResource FieldDescription}"/>
-            <TextBox Grid.Row="3" Grid.Column="1"  Style="{StaticResource ValidatedTextBox}" Text="{Binding Street, ValidatesOnDataErrors=True}"/>
+            <TextBox MaxLength="50" Grid.Row="3" Grid.Column="1"  Style="{StaticResource ValidatedTextBox}" Text="{Binding Street, ValidatesOnDataErrors=True}"/>
 
             <Label Grid.Row="4" Grid.Column="0" Content="Building number:" Style="{StaticResource FieldDescription}"/>
-            <TextBox Grid.Row="4" Grid.Column="1"  Style="{StaticResource ValidatedTextBox}" Text="{Binding BuildingNumber, ValidatesOnDataErrors=True}"/>
+            <TextBox MaxLength="10" Grid.Row="4" Grid.Column="1"  Style="{StaticResource ValidatedTextBox}" Text="{Binding BuildingNumber, ValidatesOnDataErrors=True}"/>
 
             <Label Grid.Row="5" Grid.Column="0" Content="Flat number:" Style="{StaticResource FieldDescription}"/>
             <TextBox Grid.Row="5" Grid.Column="1"  Style="{StaticResource ValidatedTextBox}" Text="{Binding FlatNumber, ValidatesOnDataErrors=True}"/>
 
             <Label Grid.Row="6" Grid.Column="0" Content="Postal code:" Style="{StaticResource FieldDescription}"/>
-            <TextBox Grid.Row="6" Grid.Column="1"  Style="{StaticResource ValidatedTextBox}" Text="{Binding PostalCode, ValidatesOnDataErrors=True}"/>
+            <TextBox MaxLength="10" Grid.Row="6" Grid.Column="1"  Style="{StaticResource ValidatedTextBox}" Text="{Binding PostalCode, ValidatesOnDataErrors=True}"/>
 
             <Label Grid.Row="7" Grid.Column="0" Content="Town:" Style="{StaticResource FieldDescription}"/>
-            <TextBox Grid.Row="7" Grid.Column="1"  Style="{StaticResource ValidatedTextBox}" Text="{Binding Town, ValidatesOnDataErrors=True}"/>
+            <TextBox MaxLength="50" Grid.Row="7" Grid.Column="1"  Style="{StaticResource ValidatedTextBox}" Text="{Binding Town, ValidatesOnDataErrors=True}"/>
 
             <Button Grid.Row="8" Grid.Column="0" HorizontalAlignment="Right" Content="Cancel" Style="{StaticResource DialogButtonCancel}" Click="Button_Click"/>
             <Button Grid.Row="8" Grid.Column="1" HorizontalAlignment="Left"  Content="Ok" Style="{StaticResource DialogButtonOk}" Command="{Binding SaveCustomer, ValidatesOnDataErrors=True}" />
