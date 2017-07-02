@@ -37,7 +37,7 @@ namespace CustomerDatabase.Model
         /// <summary>
         /// Gets or sets the flat number
         /// </summary>
-        public int FlatNumber { get; set; }
+        public int? FlatNumber { get; set; }
 
         /// <summary>
         /// Gets or sets the postal code

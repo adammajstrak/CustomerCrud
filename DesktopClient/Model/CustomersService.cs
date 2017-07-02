@@ -10,6 +10,7 @@ namespace DesktopClient.Model
     using System;
     using System.Collections.Generic;
     using System.Collections.ObjectModel;
+    using System.Diagnostics.CodeAnalysis;
     using System.Linq;
 
     /// <summary>
@@ -180,6 +181,7 @@ namespace DesktopClient.Model
         /// <typeparam name="T">Function return type</typeparam>
         /// <param name="request">Function to do</param>
         /// <returns>Result of function</returns>
+        [SuppressMessage("StyleCop.CSharp.ReadabilityRules", "SA1116:SplitParametersMustStartOnLineAfterDeclaration", Justification = "Reviewed.")]
         private T TryToMakeIt<T>(Func<T> request)
         {
             try
@@ -188,10 +190,14 @@ namespace DesktopClient.Model
             }
             catch (Microsoft.OData.Client.DataServiceTransportException ex)
             {
+                //// SA116: We shouldn't to add string, but I did it to make it more clear.
+                //// I would to use verbatim string, but in this case I couldn't to use tab to format code... So I will stay with that...
+
                 throw new ConnectionToServiceException("Cannot connect to customer service. Check if the service is running.\r\n" +
                                                        "If not - please start CustomerOdataServiceSelfHost.exe process.\r\n" +
                                                        "Check also if your database exist.\r\n" +
-                                                       "If not - please execute 'update-database' in your package manager console\r\n\r\n", ex);
+                                                       "If not - please execute 'update-database' in your package manager console\r\n\r\n", 
+                                                       ex);
             }
             catch (Microsoft.OData.Client.DataServiceRequestException ex)
             {
