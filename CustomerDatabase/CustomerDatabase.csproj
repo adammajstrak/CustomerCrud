@@ -62,6 +62,10 @@
     <Compile Include="Migrations\201707020705002_MakeFlatNumberNullable.Designer.cs">
       <DependentUpon>201707020705002_MakeFlatNumberNullable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201707020802053_make building number to be string.cs" />
+    <Compile Include="Migrations\201707020802053_make building number to be string.Designer.cs">
+      <DependentUpon>201707020802053_make building number to be string.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Address.cs" />
     <Compile Include="EntityDbContext.cs" />
@@ -80,6 +84,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201707020705002_MakeFlatNumberNullable.resx">
       <DependentUpon>201707020705002_MakeFlatNumberNullable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707020802053_make building number to be string.resx">
+      <DependentUpon>201707020802053_make building number to be string.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

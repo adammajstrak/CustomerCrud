@@ -32,7 +32,7 @@ namespace CustomerDatabase.Model
         /// Gets or sets the building number
         /// </summary>
         [Required]
-        public int BuildingNumber { get; set; }
+        public string BuildingNumber { get; set; }
 
         /// <summary>
         /// Gets or sets the flat number

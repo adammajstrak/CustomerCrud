@@ -15,9 +15,9 @@ namespace CustomerDatabase.Migrations
         protected override void Seed(CustomerDatabase.EntityDbContext context)
         {
             context.Address.AddOrUpdate(x => x.Id,
-                new Address() { Id = 1, Street = "Katowicka", BuildingNumber = 9, FlatNumber = 8, PostalCode = "43-100", Town="Tychy", CustomerId = 1 },
-                new Address() { Id = 2, Street = "Tyska", BuildingNumber = 8, FlatNumber = 7, PostalCode = "42-200", Town="Katowice", CustomerId = 2 },
-                new Address() { Id = 3, Street = "Wejchertów", BuildingNumber = 81, FlatNumber = 72, PostalCode = "22-200", Town="Warszawa", CustomerId = 3 }
+                new Address() { Id = 1, Street = "Katowicka", BuildingNumber = "9", FlatNumber = 8, PostalCode = "43-100", Town="Tychy", CustomerId = 1 },
+                new Address() { Id = 2, Street = "Tyska", BuildingNumber = "8A", FlatNumber = 7, PostalCode = "42-200", Town="Katowice", CustomerId = 2 },
+                new Address() { Id = 3, Street = "Wejchertów", BuildingNumber = "81C", FlatNumber = 72, PostalCode = "22-200", Town="Warszawa", CustomerId = 3 }
               );
 
             context.Customer.AddOrUpdate(x => x.Id,

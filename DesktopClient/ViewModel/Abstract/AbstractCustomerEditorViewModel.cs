@@ -37,12 +37,6 @@ namespace DesktopClient.ViewModel.Abstract
         private string telephoneNumber;
 
         /// <summary>
-        /// customer building number
-        /// I keep it in string, to do not invoke default parse validation, but handle it bu myself
-        /// </summary>
-        private string buildingNumber;
-
-        /// <summary>
         /// customer flat number
         /// I keep it in string, to do not invoke default parse validation, but handle it bu myself
         /// </summary>
@@ -75,7 +69,6 @@ namespace DesktopClient.ViewModel.Abstract
                 this.customer = this.GetCustomerById(this.customerId);
                 this.customerAddress = this.customer.Addresses.FirstOrDefault();
                 this.telephoneNumber = this.customer.TelephoneNumber.TelNbrFormat();
-                this.buildingNumber = this.customer.Addresses.FirstOrDefault().BuildingNumber.ToString();
                 this.flatNumber = this.customer.Addresses.FirstOrDefault().FlatNumber.ToString();
             }
         }
@@ -145,19 +138,12 @@ namespace DesktopClient.ViewModel.Abstract
         {
             get
             {
-                return this.buildingNumber;
+                return this.customerAddress.BuildingNumber;
             }
 
             set
             {
-                this.buildingNumber = value;
-
-                int val;
-                if (int.TryParse(value, out val))
-                {
-                    this.customerAddress.BuildingNumber = val;
-                }
-
+                this.customerAddress.BuildingNumber = value;
                 this.RaisePropertyChanged();
             }
         }
@@ -276,7 +262,6 @@ namespace DesktopClient.ViewModel.Abstract
             this.customerAddress = new Address();
             this.customer.Addresses = new ObservableCollection<Address>() { this.customerAddress };
             this.telephoneNumber = string.Empty;
-            this.buildingNumber = string.Empty;
             this.flatNumber = string.Empty;
             this.ClearValidation();
         }
@@ -324,20 +309,7 @@ namespace DesktopClient.ViewModel.Abstract
                 case "Street":
                     return () => string.IsNullOrEmpty(this.Street) ? "Street is required!" : string.Empty;
                 case "BuildingNumber":
-                    return () =>
-                    {
-                        if (string.IsNullOrEmpty(this.BuildingNumber))
-                        {
-                            return "Building number is required!";
-                        }
-
-                        if (!long.TryParse(this.BuildingNumber, out o))
-                        {
-                            return "Wrong format";
-                        }
-
-                        return string.Empty;
-                    };
+                    return () => string.IsNullOrEmpty(this.BuildingNumber) ? "Building number is required!" : string.Empty;
                 case "FlatNumber":
                     return () =>
                     {

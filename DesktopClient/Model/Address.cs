@@ -23,12 +23,12 @@ namespace DesktopClient.Model
         /// <summary>
         /// customer street
         /// </summary>
-        private string street;
+        private string street;  
 
         /// <summary>
         /// customer building number
         /// </summary>
-        private int buildingNumber;
+        private string buildingNumber;
 
         /// <summary>
         /// customer  flat number
@@ -82,7 +82,7 @@ namespace DesktopClient.Model
         /// <summary>
         /// Gets or sets building number
         /// </summary>
-        public int BuildingNumber
+        public string BuildingNumber
         {
             get
             {

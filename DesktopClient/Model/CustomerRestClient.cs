@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// Generation date: 02.07.2017 09:10:20
+// Generation date: 02.07.2017 10:03:57
 namespace CustomerRestClient.Model.CustomerDatabase.Model
 {
     /// <summary>
@@ -77,7 +77,7 @@ namespace CustomerRestClient.Model.CustomerDatabase.Model
         /// <param name="postalCode">Initial value of PostalCode.</param>
         /// <param name="town">Initial value of Town.</param>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
-        public static Address CreateAddress(int ID, string street, int buildingNumber, string postalCode, string town)
+        public static Address CreateAddress(int ID, string street, string buildingNumber, string postalCode, string town)
         {
             Address address = new Address();
             address.Id = ID;
@@ -138,7 +138,7 @@ namespace CustomerRestClient.Model.CustomerDatabase.Model
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
         [global::Microsoft.OData.Client.OriginalNameAttribute("BuildingNumber")]
-        public int BuildingNumber
+        public string BuildingNumber
         {
             get
             {
@@ -153,8 +153,8 @@ namespace CustomerRestClient.Model.CustomerDatabase.Model
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
-        private int _BuildingNumber;
-        partial void OnBuildingNumberChanging(int value);
+        private string _BuildingNumber;
+        partial void OnBuildingNumberChanging(string value);
         partial void OnBuildingNumberChanged();
         /// <summary>
         /// There are no comments for Property FlatNumber in the schema.
@@ -685,7 +685,7 @@ namespace CustomerRestClient.Model.Default
         </Key>
         <Property Name=""Id"" Type=""Edm.Int32"" Nullable=""false"" />
         <Property Name=""Street"" Type=""Edm.String"" Nullable=""false"" />
-        <Property Name=""BuildingNumber"" Type=""Edm.Int32"" Nullable=""false"" />
+        <Property Name=""BuildingNumber"" Type=""Edm.String"" Nullable=""false"" />
         <Property Name=""FlatNumber"" Type=""Edm.Int32"" />
         <Property Name=""PostalCode"" Type=""Edm.String"" Nullable=""false"" />
         <Property Name=""Town"" Type=""Edm.String"" Nullable=""false"" />
