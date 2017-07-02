@@ -33,7 +33,7 @@ namespace DesktopClient.Model
         /// <summary>
         /// customer  flat number
         /// </summary>
-        private int flatNumber;
+        private int? flatNumber;
 
         /// <summary>
         /// customer  postal code
@@ -99,7 +99,7 @@ namespace DesktopClient.Model
         /// <summary>
         /// Gets or sets flat number
         /// </summary>
-        public int FlatNumber
+        public int? FlatNumber
         {
             get
             {

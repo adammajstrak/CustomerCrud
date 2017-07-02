@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// Generation date: 29.06.2017 21:30:51
+// Generation date: 02.07.2017 09:10:20
 namespace CustomerRestClient.Model.CustomerDatabase.Model
 {
     /// <summary>
@@ -74,22 +74,15 @@ namespace CustomerRestClient.Model.CustomerDatabase.Model
         /// <param name="ID">Initial value of Id.</param>
         /// <param name="street">Initial value of Street.</param>
         /// <param name="buildingNumber">Initial value of BuildingNumber.</param>
-        /// <param name="flatNumber">Initial value of FlatNumber.</param>
         /// <param name="postalCode">Initial value of PostalCode.</param>
         /// <param name="town">Initial value of Town.</param>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
-        public static Address CreateAddress(int ID, 
-                    string street, 
-                    int buildingNumber, 
-                    int flatNumber, 
-                    string postalCode, 
-                    string town)
+        public static Address CreateAddress(int ID, string street, int buildingNumber, string postalCode, string town)
         {
             Address address = new Address();
             address.Id = ID;
             address.Street = street;
             address.BuildingNumber = buildingNumber;
-            address.FlatNumber = flatNumber;
             address.PostalCode = postalCode;
             address.Town = town;
             return address;
@@ -168,7 +161,7 @@ namespace CustomerRestClient.Model.CustomerDatabase.Model
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
         [global::Microsoft.OData.Client.OriginalNameAttribute("FlatNumber")]
-        public int FlatNumber
+        public global::System.Nullable<int> FlatNumber
         {
             get
             {
@@ -183,8 +176,8 @@ namespace CustomerRestClient.Model.CustomerDatabase.Model
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
-        private int _FlatNumber;
-        partial void OnFlatNumberChanging(int value);
+        private global::System.Nullable<int> _FlatNumber;
+        partial void OnFlatNumberChanging(global::System.Nullable<int> value);
         partial void OnFlatNumberChanged();
         /// <summary>
         /// There are no comments for Property PostalCode in the schema.
@@ -693,7 +686,7 @@ namespace CustomerRestClient.Model.Default
         <Property Name=""Id"" Type=""Edm.Int32"" Nullable=""false"" />
         <Property Name=""Street"" Type=""Edm.String"" Nullable=""false"" />
         <Property Name=""BuildingNumber"" Type=""Edm.Int32"" Nullable=""false"" />
-        <Property Name=""FlatNumber"" Type=""Edm.Int32"" Nullable=""false"" />
+        <Property Name=""FlatNumber"" Type=""Edm.Int32"" />
         <Property Name=""PostalCode"" Type=""Edm.String"" Nullable=""false"" />
         <Property Name=""Town"" Type=""Edm.String"" Nullable=""false"" />
         <Property Name=""CustomerId"" Type=""Edm.Int32"" />

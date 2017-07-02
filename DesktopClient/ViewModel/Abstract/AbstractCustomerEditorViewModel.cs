@@ -193,6 +193,11 @@ namespace DesktopClient.ViewModel.Abstract
             {
                 this.flatNumber = value;
 
+                if (string.IsNullOrWhiteSpace(this.flatNumber))
+                {
+                    this.customerAddress.FlatNumber = null;
+                }
+
                 int val;
                 if (int.TryParse(value, out val))
                 {
@@ -336,12 +341,7 @@ namespace DesktopClient.ViewModel.Abstract
                 case "FlatNumber":
                     return () =>
                     {
-                        if (string.IsNullOrEmpty(this.FlatNumber))
-                        {
-                            return "Flat number is required!";
-                        }
-
-                        if (!long.TryParse(this.FlatNumber, out o))
+                        if (!string.IsNullOrWhiteSpace(this.FlatNumber) && !long.TryParse(this.FlatNumber, out o))
                         {
                             return "Wrong format";
                         }
