@@ -9,6 +9,7 @@ namespace CustomerDatabase.Model
 {
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
 
     /// <summary>
     /// Initializes a new instance of the <see cref="Customer"/> class.
@@ -26,12 +27,16 @@ namespace CustomerDatabase.Model
         /// Gets or sets customer name
         /// </summary>
         [Required]
+        [Column(TypeName = "NVARCHAR")]
+        [StringLength(25)]
         public string Name { get; set; }
 
         /// <summary>
         /// Gets or sets customer surname
         /// </summary>
         [Required]
+        [Column(TypeName = "NVARCHAR")]
+        [StringLength(50)]
         public string Surname { get; set; }
 
         /// <summary>
